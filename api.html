@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razas de Perros</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <section>
+        <label for="breed">Buscador de Razas de Perros</label>
+        <h3 id="cantContainer">Cantidad</h3>
+        <select name="pets" id="breed">
+            <option value="">--Por favor selecciona una raza--</option>
+        </select>
+        <div id="imgContainer"></div>
+
+        <div id="breedInfo" class="hidden">
+            <button id="closeBreedInfo">&times;</button>
+            <div id="infoContent"></div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
