@@ -8,7 +8,7 @@ exports.loadInitialData = async () => {
       console.log('⚙️ Cargando datos iniciales...');
       const response = await axios.get('https://api.thedogapi.com/v1/breeds', {
         headers: {
-          'x-api-key': process.env.THE_DOG_API_KEY || '' // Agrega tu API key en el .env si la tienes
+          'x-api-key': process.env.THE_DOG_API_KEY || '' 
         }
       });
       const dogsData = response.data;
