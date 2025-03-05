@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Panel de Administración</h1>
+    
+    <!-- Formulario de creación -->
+    <form id="createForm" class="admin-form">
+      <input type="text" id="breed" placeholder="Raza" required>
+      <input type="url" id="image" placeholder="URL de imagen" required>
+      <input type="text" id="temperament" placeholder="Temperamento" required>
+      <input type="text" id="life_span" placeholder="Esperanza de vida" required>
+      <input type="text" id="height" placeholder="Altura (cm)" required>
+      <button type="submit">Crear Raza</button>
+    </form>
+
+    <!-- Formulario de edición (oculto por defecto) -->
+    <form id="editForm" class="admin-form hidden">
+      <input type="hidden" id="editId">
+      <input type="text" id="editBreed" placeholder="Raza" required>
+      <input type="text" id="editImage" placeholder="URL de imagen" required>
+      <input type="text" id="editTemperament" placeholder="Temperamento" required>
+      <input type="text" id="editLifeSpan" placeholder="Esperanza de vida" required>
+      <input type="text" id="editHeight" placeholder="Altura (cm)" required>
+      <button type="submit">Actualizar Raza</button>
+      <button type="button" onclick="document.getElementById('editForm').classList.add('hidden')">Cancelar</button>
+    </form>
+
+    <!-- Listado de razas -->
+    <div id="dogList" class="dog-list">
+      <!-- Las razas se cargarán aquí dinámicamente -->
+    </div>
+  </div>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

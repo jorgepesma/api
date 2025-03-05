@@ -1,0 +1,145 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+}
+
+/* Grid principal */
+#breedContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dog-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.dog-card:hover {
+    transform: translateY(-5px);
+}
+
+.dog-image {
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Panel de detalles */
+#breedInfo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    z-index: 1000;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Admin */
+.admin-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.dog-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    #breedContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #breedContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Panel de Administración */
+.admin-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.admin-form input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.dog-list {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Buscador */
+.search-box {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#breedSelect {
+    width: 300px;
+    padding: 0.8rem;
+    margin: 1rem;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+}
+
+.counter {
+    font-size: 0.9rem;
+    color: #666;
+}
